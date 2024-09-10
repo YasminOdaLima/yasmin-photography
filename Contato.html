@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato</title>
+
+    <link rel="stylesheet" href="Contato.css">
+</head>
+<body>
+    <header>
+        <div class="Logo">
+            <img src="logo.png" alt="Logo da Empresa">
+        </div>
+        <div class="Nome">
+            <h2 class="great-vibes-regular"> Yasmin Oda Photography</h2>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="QuemSomos.html">Quem Somos</a></li>
+                <li><a href="Contato.html">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+            <div>
+                <h1>Contato</h1>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14617.137842134525!2d-46.52587020852052!3d-23.665783207281542!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce69d619d62a27%3A0x41f94d2be4af4536!2sEscola%20SENAI%20A.%20Jacob%20Lafer!5e0!3m2!1spt-BR!2sbr!4v1725989421772!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+
+            <div class="Comunicação">
+                <p>Email: yasmin.o.lima@aluno.senai.br</p>
+                <p>Telefone: (11)99999-9999</p>
+                <p>Endereço: Av. Santos Dumont, 300 - Ipiranguinha, Santo André - SP</p>
+            </div>
+
+            
+    </main>
+
+    <footer>
+        <p>&copy; DA2025 YasminOda. Todos os direitos reservados.</p>
+    </footer>
+
+    <!-- JS para botões do Carrousel de imagens -->
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.carousel-item');
+
+        function moveSlide(direction) {
+            currentSlide = (currentSlide + direction + slides.length) % slides.length;
+            document.querySelector('.carousel-inner').style.transform = `translateX(-${currentSlide * 100}%)`;
+        }
+    </script>
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="flexbox.css">
+</head>
+<body>
+    <header>
+        <div class="Logo">
+            <img src="logo.png" alt="Logo da Empresa">
+        </div>
+        <div class="Nome">
+            <h2 class="great-vibes-regular"> Yasmin Oda Photography</h2>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="QuemSomos.html">Quem Somos</a></li>
+                <li><a href="Contato.html">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="Efeito">
+            <h1 class="libre-baskerville-regular">
+                Sua história contada em cada clique, transformamos instantes em arte!
+            </h1>
+            <aside>
+                <h3>Principais fotografias</h3>
+
+                <!-- Carrousel de imagens -->
+                <div class="carousel" id="myCarousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item">
+                            <img src="Foto1.jpg" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="Foto2.jpg" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="Foto3.jpg" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="Foto4.jpg" alt="...">
+                        </div>
+                    </div>
+                    <a href="#" class="carousel-control carousel-control-prev" onclick="moveSlide(-1)">
+                        <span class="carousel-control-prev-icon" aria-hidden="true">&#9664;</span>
+                        <span class="visually-hidden">Previous</span>
+                    </a>
+                    <a href="#" class="carousel-control carousel-control-next" onclick="moveSlide(1)">
+                        <span class="carousel-control-next-icon" aria-hidden="true">&#9654;</span>
+                        <span class="visually-hidden">Next</span>
+                    </a>
+                </div>
+            </aside>
+        </div>
+
+        <section>
+            <h2>Nossa equipe!</h2>
+            <details>
+                <summary>Clique para mais informações</summary>
+                <div class="Equipe">
+                    <div class="YasminOda">
+                        <img src="Yas.jpg" alt="Dona da empressa">
+                        <p>Nome:Yasmin Oda</p>
+                        <p>Idade: 16 anos</p>
+                        <p>Formada em fotografia</p>
+                    </div>
+                    <div class="Ste">
+                        <img src="Ste.jpg" alt="Funcionária">
+                        <p>Nome:Stefany Araujo</p>
+                        <p>Idade: 16 anos</p>
+                        <p>Formada em fotografia</p>
+                    </div>
+                    <div class="Mimi">
+                        <img src="Mimi.jpg" alt="Funcionária">
+                        <p>Nome:Milena Mendes</p>
+                        <p>Idade: 16 anos</p>
+                        <p>Formada em fotografia</p>
+                    </div>
+                    <div class="Munin">
+                        <img src="Munin.jpg" alt="Funcionária">
+                        <p>Nome:Livia Munin</p>
+                        <p>Idade: 16 anos</p>
+                        <p>Formada em fotografia</p>
+                    </div>
+                    <div class="Duda">
+                        <img src="Duda.jpg" alt="Funcionária">
+                        <p>Nome:Maria Eduarda Brigatto</p>
+                        <p>Idade: 16 anos</p>
+                        <p>Formada em fotografia</p>
+                    </div>
+                </div>
+            </details>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; DA2025 YasminOda. Todos os direitos reservados.</p>
+    </footer>
+
+    <!-- JS para botões do Carrousel de imagens -->
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.carousel-item');
+
+        function moveSlide(direction) {
+            currentSlide = (currentSlide + direction + slides.length) % slides.length;
+            document.querySelector('.carousel-inner').style.transform = `translateX(-${currentSlide * 100}%)`;
+        }
+    </script>
+</body>
+</html>
